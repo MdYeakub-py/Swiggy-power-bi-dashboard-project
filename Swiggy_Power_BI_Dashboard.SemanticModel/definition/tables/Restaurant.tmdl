@@ -1,0 +1,74 @@
+table Restaurant
+	lineageTag: e1753475-afba-462e-9a7b-fbea1d73ca95
+
+	column Restaurant_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fc5b417-ccf3-4c36-a226-61647d750c51
+		summarizeBy: none
+		sourceColumn: Restaurant_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 81bd45dd-8df2-473d-82be-4e8d57270e2c
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 3221f36b-3531-423d-8ecd-3d75b485735f
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 923cec08-bcb0-4f97-9cff-f409246ce440
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rating
+		dataType: string
+		lineageTag: 130788fc-2003-46a4-b159-387cfaf3ea75
+		summarizeBy: none
+		sourceColumn: Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rating_count
+		dataType: string
+		lineageTag: 1a9a34b2-376c-4ff2-a2c3-99815599dbe4
+		summarizeBy: none
+		sourceColumn: Rating_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cuisine
+		dataType: string
+		lineageTag: c542ef9d-0edf-41de-b461-dc43a0bec67f
+		summarizeBy: none
+		sourceColumn: Cuisine
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Restaurant = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\new work space\project_practics\Power BI\Swiggy power bi dashboard project\Restaurant.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Restaurant_id", Int64.Type}, {"Name", type text}, {"Country", type text}, {"City", type text}, {"Rating", type text}, {"Rating_count", type text}, {"Cuisine", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

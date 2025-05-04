@@ -1,0 +1,36 @@
+table All_Measure
+	lineageTag: f52f0cd0-aa92-475b-a49c-6ada3b23d194
+
+	measure 'Total Users' = DISTINCTCOUNT(Users[User_id])
+		formatString: 0
+		lineageTag: b42d4e0d-b0ab-438b-91e6-8f997015e00b
+
+	measure 'Total Orders' = COUNTROWS(Orders)
+		formatString: 0
+		lineageTag: fa87fc34-47bb-420d-ad2b-a3e948cf44ae
+
+	measure 'top10% Customers' = CALCULATE(SUM(Users[totalSales]),FILTER(Users,Users[Rank]<=7793))
+		formatString: 0
+		lineageTag: d65d7f3a-c8a8-439b-bb24-767b1af07fa4
+
+	measure 'Rating Count' = COUNT(Restaurant[Rating])
+		formatString: 0
+		lineageTag: 77b6fd87-50e6-4655-bba1-861e2e8bdca6
+
+	column Column
+		formatString: 0
+		lineageTag: 0bb2d02b-b596-4f19-9986-386d3523b0a7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition All_Measure = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = a890b17896c847a0aaf1091938183acc
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

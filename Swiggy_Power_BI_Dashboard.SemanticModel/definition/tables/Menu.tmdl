@@ -1,0 +1,73 @@
+table Menu
+	lineageTag: 0403616a-2bda-40d0-8e3e-ee46debbf18c
+
+	column Menu_id
+		dataType: string
+		lineageTag: f525fcda-16ec-49fe-94aa-2b9bdde3fd76
+		summarizeBy: none
+		sourceColumn: Menu_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Restaurant_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 74669fc7-801f-4cc7-a467-4b6a77717651
+		summarizeBy: none
+		sourceColumn: Restaurant_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Food_id
+		dataType: string
+		lineageTag: ff42afb0-6884-493a-9336-d0e0fa915c1b
+		summarizeBy: none
+		sourceColumn: Food_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cuisine
+		dataType: string
+		lineageTag: 7edb1f90-019c-4626-8e00-e4f27b7599c6
+		summarizeBy: none
+		sourceColumn: Cuisine
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bdad436-7266-46c9-ae61-f0c828298231
+		summarizeBy: sum
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column FoodType
+		dataType: string
+		lineageTag: db9b75c2-b660-4238-8024-2e95500bf062
+		summarizeBy: none
+		sourceColumn: FoodType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Menu = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\new work space\project_practics\Power BI\Swiggy power bi dashboard project\Menu.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Menu_id", type text}, {"Restaurant_id", Int64.Type}, {"Food_id", type text}, {"Cuisine", type text}, {"Price", Int64.Type}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"Food_id"}, Food, {"Food_id"}, "Food", JoinKind.LeftOuter),
+				    #"Expanded Food" = Table.ExpandTableColumn(#"Merged Queries", "Food", {"Food_Type"}, {"Food.Food_Type"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded Food",{{"Food.Food_Type", "Food_Type"}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns",null,"Others",Replacer.ReplaceValue,{"Food_Type"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Replaced Value",{{"Food_Type", "FoodType"}}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Renamed Columns1","","Others",Replacer.ReplaceValue,{"FoodType"})
+				in
+				    #"Replaced Value1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,30 @@
+table 'Measure Table'
+	lineageTag: 6244a70d-f441-4efb-86fb-2cd9560f90d8
+
+	measure 'Sale Value' = SUM(Orders[Value])
+		formatString: 0
+		lineageTag: e0876c9d-8eec-4dd7-bbca-59469127c04a
+
+	measure 'Top N Sales' = VAR rankValue = RANKX(ALL(Orders[City]), [Sale Value],, DESC) VAR selectedRank = SELECTEDVALUE('Rank Table'[No]) RETURN IF(selectedRank = 0,[Sale Value], IF(rankValue <= selectedRank, [Sale Value],BLANK()))
+		formatString: 0
+		lineageTag: 04dfc899-7bcf-4575-afbd-92c881dc11e8
+
+	column Column1
+		dataType: string
+		lineageTag: 57c53767-743a-4957-bc53-ca4fee8eefa1
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Measure Table' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

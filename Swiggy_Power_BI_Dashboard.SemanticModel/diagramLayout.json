@@ -1,0 +1,124 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 362.80769016946942,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 479.62421065923161,
+            "y": 483.94137206917134
+          },
+          "nodeIndex": "Food",
+          "nodeLineageTag": "b141c60f-92ee-4d65-85a5-442137a3e151",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 162.11884566672859
+          },
+          "nodeIndex": "Menu",
+          "nodeLineageTag": "0403616a-2bda-40d0-8e3e-ee46debbf18c",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 618.41040181545577,
+            "y": -15.621302230926716
+          },
+          "nodeIndex": "Orders",
+          "nodeLineageTag": "5795884f-dadd-46aa-b7b8-e58b77736f90",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 303.202255104609,
+            "y": 0
+          },
+          "nodeIndex": "Restaurant",
+          "nodeLineageTag": "e1753475-afba-462e-9a7b-fbea1d73ca95",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 902.62216291713662,
+            "y": -50
+          },
+          "nodeIndex": "Users",
+          "nodeLineageTag": "2768d3a7-a031-4f41-bdcf-ed2ca3e92f0d",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136.6221629171366,
+            "y": 242.9706860345857
+          },
+          "nodeIndex": "All_Measure",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1370.6221629171366,
+            "y": 242.9706860345857
+          },
+          "nodeIndex": "Rank Table",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1604.6221629171366,
+            "y": 290.9706860345857
+          },
+          "nodeIndex": "Measure Table",
+          "nodeLineageTag": "6244a70d-f441-4efb-86fb-2cd9560f90d8",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 63.287087723234038,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

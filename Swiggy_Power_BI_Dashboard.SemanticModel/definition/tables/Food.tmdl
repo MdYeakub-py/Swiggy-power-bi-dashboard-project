@@ -1,0 +1,42 @@
+table Food
+	lineageTag: b141c60f-92ee-4d65-85a5-442137a3e151
+
+	column Food_id
+		dataType: string
+		lineageTag: a94593d1-5f7c-4194-92af-0b74e985fd93
+		summarizeBy: none
+		sourceColumn: Food_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Item
+		dataType: string
+		lineageTag: dcb7697c-e598-452c-8701-909f39d7f61e
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column Food_Type
+		dataType: string
+		lineageTag: 6c081ea3-876a-4d92-aed6-6cc586483f45
+		summarizeBy: none
+		sourceColumn: Food_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Food = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\new work space\project_practics\Power BI\Swiggy power bi dashboard project\Food.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Food_id", type text}, {"Item", type text}, {"Food_Type", type text}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

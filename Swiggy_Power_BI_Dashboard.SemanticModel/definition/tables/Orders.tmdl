@@ -1,0 +1,101 @@
+table Orders
+	lineageTag: 5795884f-dadd-46aa-b7b8-e58b77736f90
+
+	column order_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9198ef49-dd9a-40e3-8387-00e6f59ff3a3
+		summarizeBy: none
+		sourceColumn: order_date
+
+		variation Variation
+			isDefault
+			relationship: 4ade8ee3-711d-40cc-91c9-cbdecade7de4
+			defaultHierarchy: LocalDateTable_db1dc2e5-802f-404e-9904-53e2584d9917.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column currency
+		dataType: string
+		lineageTag: 304d5400-a24a-49c3-8009-87cef80360ec
+		summarizeBy: none
+		sourceColumn: currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column User_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 51ad0300-5da5-41f4-adb0-c1fe0f633cb8
+		summarizeBy: none
+		sourceColumn: User_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Restaurant_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fc19a8a-5684-430a-800b-fa19e367206a
+		summarizeBy: none
+		sourceColumn: Restaurant_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 34db2674-4bc7-4374-be59-1c00a7111fd1
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: 61a403fa-68cb-4640-b333-38f5d034e2a2
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: int64
+		formatString: 0
+		lineageTag: ec0eec8c-e426-48c4-b627-e0df217eb730
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: string
+		lineageTag: fa4293fb-8c32-4abc-a46e-400c0b57dd3c
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Orders = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\new work space\project_practics\Power BI\Swiggy power bi dashboard project\Orders.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_date", type date}, {"Sales_QTY", Int64.Type}, {"Sales_amount", Int64.Type}, {"currency", type text}, {"User_id", Int64.Type}, {"Restaurant_id", Int64.Type}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","INR","TK",Replacer.ReplaceText,{"currency"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Replaced Value", {"Restaurant_id"}, Restaurant, {"Restaurant_id"}, "Restaurant", JoinKind.Inner),
+				    #"Expanded Restaurant" = Table.ExpandTableColumn(#"Merged Queries", "Restaurant", {"City"}, {"Restaurant.City"}),
+				    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Expanded Restaurant", {"order_date", "currency", "User_id", "Restaurant_id", "Restaurant.City"}, "Attribute", "Value"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Unpivoted Columns",{{"Attribute", "Type"}}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Renamed Columns","Sales_QTY","Quantity",Replacer.ReplaceText,{"Type"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","Sales_amount","Amount",Replacer.ReplaceText,{"Type"}),
+				    #"Added Custom" = Table.AddColumn(#"Replaced Value2", "Year", each Date.Year([order_date])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Added Custom",{{"Restaurant.City", "City"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,81 @@
+table Users
+	lineageTag: 2768d3a7-a031-4f41-bdcf-ed2ca3e92f0d
+
+	column User_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8cfdb9fe-1643-44fc-971f-7ae73b834638
+		summarizeBy: none
+		sourceColumn: User_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: f22fbbf7-7f7d-48e6-8340-d14d32a534ab
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 264af02a-05ed-4ee5-a3bc-f35c508b6f8c
+		summarizeBy: none
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: d51bfc45-d1ca-460b-994e-1f9225e312b4
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marital Status'
+		dataType: string
+		lineageTag: e10db97b-7ca2-4e4e-a6b2-ab617f00e7e0
+		summarizeBy: none
+		sourceColumn: Marital Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Occupation
+		dataType: string
+		lineageTag: 099caf12-b390-4eb7-911f-2c8b0c894668
+		summarizeBy: none
+		sourceColumn: Occupation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rank = RANKX(ALL(Users),[totalSales],,DESC,Dense)
+		formatString: 0
+		lineageTag: 5e7c8064-4729-4840-8573-c74bd65d4100
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column totalSales = CALCULATE(SUM(Orders[Value]),RELATEDTABLE(Orders),Orders[Type] = "Amount")
+		formatString: 0
+		lineageTag: c1ee4e6a-fd99-4085-a1b5-fffa3ba2a608
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Users = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\new work space\project_practics\Power BI\Swiggy power bi dashboard project\Users.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"User_id", Int64.Type}, {"Name", type text}, {"Age", Int64.Type}, {"Gender", type text}, {"Marital Status", type text}, {"Occupation", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
