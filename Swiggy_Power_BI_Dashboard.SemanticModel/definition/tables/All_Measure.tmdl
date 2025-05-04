@@ -17,6 +17,17 @@ table All_Measure
 		formatString: 0
 		lineageTag: 77b6fd87-50e6-4655-bba1-861e2e8bdca6
 
+	measure 'Total Quantity Amount' = SUM(Orders[Value])
+		formatString: 0
+		lineageTag: 7eb9d03c-35c6-4408-af73-d5332140ab52
+
+	measure 'Dynamic Title Year' = ```
+			
+			         var selectType = SELECTEDVALUE(Orders[Type])
+			         RETURN selectType&" by Year "
+			```
+		lineageTag: 820b93f6-b50e-4691-9f5e-aefb40e87d13
+
 	column Column
 		formatString: 0
 		lineageTag: 0bb2d02b-b596-4f19-9986-386d3523b0a7

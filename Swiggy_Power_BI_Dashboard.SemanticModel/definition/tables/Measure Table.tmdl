@@ -9,6 +9,14 @@ table 'Measure Table'
 		formatString: 0
 		lineageTag: 04dfc899-7bcf-4575-afbd-92c881dc11e8
 
+	measure 'Dynamic Title Top Sales' = ```
+			
+			            var selectRank = SELECTEDVALUE('Rank Table'[Type])
+			            VAR selectType = SELECTEDVALUE(Orders[Type])
+			    RETURN selectRank&" City "&selectType
+			```
+		lineageTag: 61dc04c7-9925-442f-8337-425ba199cc97
+
 	column Column1
 		dataType: string
 		lineageTag: 57c53767-743a-4957-bc53-ca4fee8eefa1
