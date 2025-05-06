@@ -28,6 +28,26 @@ table All_Measure
 			```
 		lineageTag: 820b93f6-b50e-4691-9f5e-aefb40e87d13
 
+	measure 'User Count (Orders)' = DISTINCTCOUNT(Orders[User_id])
+		formatString: 0
+		lineageTag: 1e3dfa01-f04a-4e63-8303-233dcacf08af
+
+	measure 'Current Year' = MAX(Orders[Year])
+		lineageTag: a89b1843-204a-44b2-b617-16e4431f8d9c
+
+	measure 'Current YR Sales' = VAR yr = [Current Year] RETURN CALCULATE([Sale Value],Orders[Year]=yr)
+		formatString: 0
+		lineageTag: 234ae9ae-4460-4471-ba25-3152179cd50c
+
+	measure 'Previous YR' = ([Current Year]-1)
+		lineageTag: ff9c641d-b0cd-4371-b0f4-43df86b036b4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Previous YR Sales' = VAR pr_sales = [Previous YR] RETURN CALCULATE([Sale Value], Orders[Year]= pr_sales)
+		formatString: 0
+		lineageTag: ab664477-d989-44e6-be02-16f359c890e2
+
 	column Column
 		formatString: 0
 		lineageTag: 0bb2d02b-b596-4f19-9986-386d3523b0a7
