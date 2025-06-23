@@ -48,6 +48,10 @@ table All_Measure
 		formatString: 0
 		lineageTag: ab664477-d989-44e6-be02-16f359c890e2
 
+	measure 'Total City' = DISTINCTCOUNT(Restaurant[City])
+		formatString: 0
+		lineageTag: 1a1a05d9-d61a-43ac-848d-89dce21ed339
+
 	column Column
 		formatString: 0
 		lineageTag: 0bb2d02b-b596-4f19-9986-386d3523b0a7
