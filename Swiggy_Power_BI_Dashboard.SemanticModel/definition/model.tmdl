@@ -10,7 +10,7 @@ annotation PBI_QueryOrder = ["Food","Menu","Orders","Restaurant","Users","Measur
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.143.878.0 (25.05)+b20aa3b866ec1b70879135a4e60e4b1301c75b21
+annotation PBIDesktopVersion = 2.145.1105.0 (25.07)+decbc46fce458c5b8d5109d6f32a743f2ac949c8
 
 annotation PBI_ProTooling = ["DevMode"]
 
