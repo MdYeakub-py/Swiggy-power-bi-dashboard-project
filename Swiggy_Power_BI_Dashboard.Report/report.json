@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.64\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":\"5.62\"}},\"activeSectionIndex\":4,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.64\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":\"5.62\"}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 1,
   "publicCustomVisuals": [
     "InforiverFilterF39DAE8D57A743EF89F5C3809DEE2B69",
@@ -383,7 +383,7 @@
       "ordinal": 4,
       "visualContainers": [
         {
-          "config": "{\"name\":\"02e55ce7723a05868d8f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19,\"y\":155,\"z\":11000,\"width\":228,\"height\":334,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Tirupati city ranked 1st with the highest order amount of 43 million in sales, followed by Electronic City, Bangalore, which generated 29 million in sales.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Customer preference is for vegetarian options, with sales of 122 million, which is 7.2% more than non-vegetarian sales.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"In 2018, sales increased rapidly by 356% compared to the previous year. However, in 2019, sales dropped by 17%.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "config": "{\"name\":\"02e55ce7723a05868d8f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19,\"y\":155,\"z\":11000,\"width\":228,\"height\":334,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Tirupati city ranked 1st with the highest order amount of 43 million in sales, followed by Electronic City, Bangalore, which generated 29 million in sales.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Customer preference is for vegetarian options, with sales of 122 million, which is 7.2% more than non-vegetarian sales.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"In 2018, sales increased rapidly by 356% compared to the previous year. However, in 2019, sales dropped by 17%.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
           "filters": "[]",
           "height": 334.00,
           "width": 228.00,
@@ -392,7 +392,7 @@
           "z": 11000.00
         },
         {
-          "config": "{\"name\":\"12082a748ed332008328\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11,\"y\":141,\"z\":10000,\"width\":243,\"height\":23,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "config": "{\"name\":\"12082a748ed332008328\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11,\"y\":141,\"z\":10000,\"width\":243,\"height\":23,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
           "height": 23.00,
           "width": 243.00,
@@ -410,7 +410,7 @@
           "z": 3000.00
         },
         {
-          "config": "{\"name\":\"1992e29695c8b173bf27\",\"layouts\":[{\"id\":0,\"position\":{\"x\":28,\"y\":113,\"z\":9000,\"width\":114,\"height\":39,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Overview\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#e66c37\"}}]}]}}]}}}",
+          "config": "{\"name\":\"1992e29695c8b173bf27\",\"layouts\":[{\"id\":0,\"position\":{\"x\":28,\"y\":113,\"z\":9000,\"width\":114,\"height\":39,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Overview\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#e66c37\"}}]}]}}]}}}",
           "filters": "[]",
           "height": 39.00,
           "width": 114.00,
@@ -419,7 +419,7 @@
           "z": 9000.00
         },
         {
-          "config": "{\"name\":\"1b968e33aad734850caf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":270.09090909090907,\"y\":153.8181818181818,\"z\":7000,\"width\":228,\"height\":334,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Young customers aged 21 to 25 buy the most products, and most of them are college students. Create targeted marketing campaigns for this age group.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Revenue from male customers is higher. Offer discounts to female customers to attract more female buyers\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"The top 10% of customers account for 80% of sales. Implement a VIP program for top users, offering exclusive discounts.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "config": "{\"name\":\"1b968e33aad734850caf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":270.09090909090907,\"y\":153.8181818181818,\"z\":7000,\"width\":228,\"height\":334,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Young customers aged 21 to 25 buy the most products, and most of them are college students. Create targeted marketing campaigns for this age group.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Revenue from male customers is higher. Offer discounts to female customers to attract more female buyers\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"The top 10% of customers account for 80% of sales. Implement a VIP program for top users, offering exclusive discounts.\",\"textStyle\":{\"fontFamily\":\"Times New Roman, serif\",\"fontSize\":\"12pt\"}}],\"listType\":\"bullet\"}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
           "height": 334.00,
           "width": 228.00,
@@ -428,7 +428,7 @@
           "z": 7000.00
         },
         {
-          "config": "{\"name\":\"2a33867004b4d13bc422\",\"layouts\":[{\"id\":0,\"position\":{\"x\":262,\"y\":141,\"z\":5000,\"width\":242,\"height\":22,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "config": "{\"name\":\"2a33867004b4d13bc422\",\"layouts\":[{\"id\":0,\"position\":{\"x\":262,\"y\":141,\"z\":5000,\"width\":242,\"height\":22,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
           "height": 22.00,
           "width": 242.00,
@@ -437,7 +437,7 @@
           "z": 5000.00
         },
         {
-          "config": "{\"name\":\"2e8343dc9d41400df61b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.909090909090908,\"y\":108.18181818181817,\"z\":8000,\"width\":242.72727272727272,\"height\":390.9090909090909,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"7L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "config": "{\"name\":\"2e8343dc9d41400df61b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.909090909090908,\"y\":108.18181818181817,\"z\":8000,\"width\":242.72727272727272,\"height\":390.9090909090909,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"7L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
           "height": 390.91,
           "width": 242.73,
@@ -473,7 +473,7 @@
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"7a518e5864bd4c45fbfb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":311.8181818181818,\"y\":3.6363636363636362,\"z\":6000,\"width\":197.27272727272725,\"height\":86.36363636363636,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Insights\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"36pt\",\"color\":\"#e66c37\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "config": "{\"name\":\"7a518e5864bd4c45fbfb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":311.8181818181818,\"y\":3.6363636363636362,\"z\":6000,\"width\":197.27272727272725,\"height\":86.36363636363636,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Insights\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"36pt\",\"color\":\"#e66c37\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
           "filters": "[]",
           "height": 86.36,
           "width": 197.27,
@@ -491,7 +491,7 @@
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"91ed1574344cc10fdc7b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":757,\"y\":107,\"z\":13000,\"width\":243,\"height\":391}}],\"singleVisualGroup\":{\"displayName\":\"Group 1\",\"groupMode\":0}}",
+          "config": "{\"name\":\"91ed1574344cc10fdc7b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":757,\"y\":107,\"z\":13000,\"width\":243,\"height\":391,\"tabOrder\":3000}}],\"singleVisualGroup\":{\"displayName\":\"Group 1\",\"groupMode\":0}}",
           "height": 391.00,
           "width": 243.00,
           "x": 757.00,
@@ -508,7 +508,7 @@
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"9571f70b37139a6d1926\",\"layouts\":[{\"id\":0,\"position\":{\"height\":390.9090909090909,\"width\":243.090909090909,\"x\":510,\"y\":108,\"z\":12000,\"tabOrder\":12000}}],\"singleVisualGroup\":{\"displayName\":\"Group 1\",\"groupMode\":0}}",
+          "config": "{\"name\":\"9571f70b37139a6d1926\",\"layouts\":[{\"id\":0,\"position\":{\"height\":390.9090909090909,\"width\":243.090909090909,\"x\":510,\"y\":108,\"z\":12000,\"tabOrder\":13000}}],\"singleVisualGroup\":{\"displayName\":\"Group 1\",\"groupMode\":0}}",
           "height": 390.91,
           "width": 243.09,
           "x": 510.00,
@@ -516,7 +516,7 @@
           "z": 12000.00
         },
         {
-          "config": "{\"name\":\"9fadb3f7951a074d6c61\",\"layouts\":[{\"id\":0,\"position\":{\"x\":886,\"y\":0,\"z\":4000,\"width\":118,\"height\":94,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Swiggy_logo029697667537781358.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "config": "{\"name\":\"9fadb3f7951a074d6c61\",\"layouts\":[{\"id\":0,\"position\":{\"x\":886,\"y\":0,\"z\":4000,\"width\":118,\"height\":94,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Swiggy_logo029697667537781358.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
           "height": 94.00,
           "width": 118.00,
@@ -552,7 +552,7 @@
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"e109f3f30eab4a184c2e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":270,\"y\":113,\"z\":3000,\"width\":209,\"height\":39,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"User Performance\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#e66c37\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "config": "{\"name\":\"e109f3f30eab4a184c2e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":270,\"y\":113,\"z\":3000,\"width\":209,\"height\":39,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"User Performance\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#e66c37\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
           "height": 39.00,
           "width": 209.00,
