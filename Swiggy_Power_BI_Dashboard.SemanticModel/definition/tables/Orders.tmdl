@@ -85,7 +85,7 @@ table Orders
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_date", type date}, {"Sales_QTY", Int64.Type}, {"Sales_amount", Int64.Type}, {"currency", type text}, {"User_id", Int64.Type}, {"Restaurant_id", Int64.Type}}),
 				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","INR","TK",Replacer.ReplaceText,{"currency"}),
-				    #"Merged Queries" = Table.NestedJoin(#"Replaced Value", {"Restaurant_id"}, Restaurant, {"Restaurant_id"}, "Restaurant", JoinKind.Inner),
+				    #"Merged Queries" = Table.NestedJoin(#"Replaced Value", {"Restaurant_id"}, Restaurant, {"Restaurant_id"}, "Restaurant", JoinKind.LeftOuter),
 				    #"Expanded Restaurant" = Table.ExpandTableColumn(#"Merged Queries", "Restaurant", {"City"}, {"Restaurant.City"}),
 				    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Expanded Restaurant", {"order_date", "currency", "User_id", "Restaurant_id", "Restaurant.City"}, "Attribute", "Value"),
 				    #"Renamed Columns" = Table.RenameColumns(#"Unpivoted Columns",{{"Attribute", "Type"}}),

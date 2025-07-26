@@ -52,6 +52,14 @@ table All_Measure
 		formatString: 0
 		lineageTag: 1a1a05d9-d61a-43ac-848d-89dce21ed339
 
+	measure 'Restaurant Count' = DISTINCTCOUNT(Restaurant[Restaurant_id])
+		formatString: 0
+		lineageTag: e8909d49-1299-482a-bf9b-9bb0128a267c
+
+	measure 'Average Rating' = AVERAGE(Restaurant[Rating])
+		formatString: 0
+		lineageTag: 4df8268f-5b35-4a74-b7d5-ce00016485dd
+
 	column Column
 		formatString: 0
 		lineageTag: 0bb2d02b-b596-4f19-9986-386d3523b0a7
